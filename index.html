@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS-Ass-3</title>
+</head>
+<body>
+    <h1>JavaScript Handson - 3 Questions and Answers : <br> -- Iteration Statements --</h1><br><br><hr>
+    <p><pre>Q.1) Take a number from the user and print the count of digits in that number.</pre></p>
+    <h3>Ans: <pre>
+                    const Find_Digits = (N) =>{
+
+                        var count = 0;
+                        
+                        if (N >= 1) ++count;
+
+                        while (N / 10 >= 1) {
+
+                            N /= 10;
+                            ++count;
+
+                        }
+
+                        return count;
+
+                    };
+
+    </pre></h3><br><hr>
+
+    <p><pre>Q.2) Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number. </pre></p>
+    <h3>Ans: <pre>
+                    const Find_Five = (N) => {
+
+                        var x;
+                        var count = 0;
+
+                        while (N !== 0){
+
+                            x = N % 10;
+                            N = parseInt(N / 10);
+
+                            if(x == 5){
+                            count++;
+                            }
+
+                        }
+
+                        return count;
+
+                    };
+          
+    </pre></h3><br><hr>
+
+    <p><pre>Q.3) You are given an integer N, and your task is to find the sum of all the even integers starting from 1 upto N (N is inclusive).</pre></p>
+    <h3>Ans: <pre>
+                    const findSum = (N) => {
+                
+                        
+                        let a = 0;
+                    
+                        for(var i = 1; i <= N; i++){
+                        
+                        
+                            if (i % 2 === 0){
+                            a = a + i;
+                            }
+                            
+                        }
+                        
+                        return a;
+                
+                    };
+    
+    </pre></h3><br><hr>
+
+    <p><pre>Q.4) Write a program that takes a number from the user and get the sum of the digits present in the number.</pre></p>
+    <h3>Ans: <pre>
+                    const Number_Sum = (N) =>{
+            
+                        var x = 0;
+                        
+                        while (N !== 0) {
+                        
+                        x = x + N % 10;
+                        N = parseInt(N / 10);
+                        
+                        }
+                        
+                        return x;
+                        
+                    };
+    </pre></h3><br><hr>
+
+    <p><pre>Q.5) Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first.</pre></p>
+    <h3>Ans: <pre>
+                    const Print_Odd = (N) =>{
+            
+                        for(let i = 2; i <= N; i++){
+                        
+                            if(i == 2 || i % 2 !== 0){
+                            
+                            console.log(i);
+                                
+                            }
+                            
+                        }
+                    
+                    };
+    </pre></h3><br><hr>
+
+    <p><pre>Q.6) Write a program which ask user for no of lines and print a pattern using an asterik.</pre></p>
+    <h3>Ans: <pre>
+                    const Print_pattern = (N) =>{
+            
+                        var s = "";
+                            
+                        for (let i = 1; i <= N; i++){
+                        
+                        for (let j = 0; j < i; j++){
+                            
+                            s += "*";
+                            
+                        }
+                        
+                        s += "\n";
+                        
+                        }
+                        
+                        console.log(s);
+                        
+                    };
+        
+    </pre></h3><br><hr>
+
+    <p><pre>Q.7) Write a program which takes  a number from user and check whether number is prime number or not a prime number.</pre></p>
+    <h3>Ans: <pre>
+                    const Prime_Check = (N) =>{
+            
+                        var Value = 0;
+                        
+                        for (let i = 1; i <= N; i++){
+                        
+                            if (N % i === 0){
+                                Value++;
+                            }
+                        }
+                        
+                        if(Value == 2){
+                        
+                            return "YES";
+                        }
+                        else{
+                            return "NO";
+                        }
+                            
+                    };
+    </pre></h3><br><hr>
+
+    <p><pre>Q.8) You are given an integer N, and your task is to print all the integers starting from 1 till N (N inclusive).</pre></p>
+    <h3>Ans: <pre>
+                    const printNumbers = (n) => {
+            
+                        for (let i = 1 ; i <= n; i++){
+                        console.log(i);
+                        }
+                        
+                    };
+        
+    </pre></h3><br><hr>
+
+    <p><pre>Q.9) Write a program which takes a number from user and print the table.</pre></p>
+    <h3>Ans: <pre>
+                        const Print_Table = (N) =>{
+                
+                            for(var i = 1 ; i <= 10 ; i++){
+                                    
+                            var a = N + " * " + i + " = " + (i * N);
+                            
+                            console.log(a);
+                        }
+                        
+                        };
+    </pre></h3><br><hr>
+
+</body>
+</html>
